@@ -11,64 +11,39 @@ const Login = (props: { setEmail: (email: string) => void }) => {
 
     return (
         <>
-            <div className="max-w-[1785px] h-[927px] lg:h-[1117px] mx-auto relative flex flex-col">
-                <div className="w-[2100px] h-full bg-[#010d1f] absolute top-0 -z-20"></div>
-                <img
-                    src="/images/Frame32.png"
-                    className="h-full absolute top-0 -z-10"
-                    alt=""
-                />
-                <div className="flex w-[150px] lg:w-[200px] h-[80px] my-10 ml-5 lg:ml-20">
-                    <a href="/home" className="flex w-[150px] lg:w-[200px] h-[80px]">
-                        <img
-                            src="/images/image-109.webp"
-                            alt="logo"
-                            className="w-[60px] h-[50px] lg:w-[70px] lg:h-[69px] my-auto mr-3"
-                        />
-                        <h1 className="text-white text-base lg:text-xl my-auto font-semibold leading-[20px]">
-                            Test
-                        </h1>
-                    </a>
-                </div>
-
+            <div className="max-w-auto h-[700px] mx-auto relative flex flex-col">
                 {/* form */}
-                <div className="rounded-md bg-white shadow-2xl h-[600px] w-[90%] md:w-[70%] lg:w-[40%] lg:h-[500px] mx-auto flex flex-col items-center justify-center gap-10 text-[#5A5A5D] lg:mt-20">
+                <div className="h-[600px] w-[90%] md:w-[70%] lg:w-[40%] lg:h-[500px] mx-auto flex flex-col items-center justify-center gap-10 text-[#5A5A5D] lg:mt-20">
                     <h2 className="text-3xl font-medium text-black">
                         Login to your account
                     </h2>
-                    <form className="flex flex-col gap-10 lg:w-[70%]">
+                    <form className="flex flex-col gap-10 w-[70%]">
                         {/* email */}
                         <div className="flex flex-col gap-2">
                             <label htmlFor="text" className="font-medium">
-                                Email / Username
+                                Email & Username
                             </label>
-                            <div className="border-2 p-3 rounded-md hover:border-sky-400/[.5] focus:border-sky-400/[.5]">
+                            <div>
                                 <input
                                     type="text"
-                                    placeholder="Email / Username"
-                                    className="w-full"
+                                    placeholder="Email & Username"
+                                    className="border-2 p-3 rounded-md w-full hover:border-purple-500/[.5] focus:border-purple-500 focus:outline-none"
                                     required
-                                    style={{ outline: "0px" }}
                                 />
                             </div>
                         </div>
-
-                        {/* password */}
                         <div className="flex flex-col gap-2">
-                            <div className="flex justify-between">
-                                <label htmlFor="password" className="font-medium">
-                                    Password
-                                </label>
-                            </div>
-                            <div className="flex items-center lg:justify-between border-2 p-3 rounded-md hover:border-sky-400/[.5] focus:border-sky-400/[.5]">
+                            <label htmlFor="text" className="font-medium">
+                                Password
+                            </label>
+                            <div className="relative">
                                 <input
                                     type={isVisible ? "text" : "password"}
                                     placeholder="Password"
-                                    className="w-full"
-                                    style={{ outline: "0px" }}
+                                    className="border-2 p-3 rounded-md w-full hover:border-red-500/[.5] focus:border-red-500 focus:outline-none"
                                     required
                                 />
-                                <div className="w-[15px]">
+                                <div className="absolute right-0 top-0 bottom-0 flex items-center pr-3">
                                     <div onClick={toggleVisibility}>
                                         {isVisible ? (
                                             <AiOutlineEyeInvisible size={20} />
@@ -79,24 +54,33 @@ const Login = (props: { setEmail: (email: string) => void }) => {
                                 </div>
                             </div>
                         </div>
+
                         {/* end password */}
-                        <button
-                            type="submit"
-                            className="bg-[#007DFA] lg:w-[100%] text-white w-[270px] 
-                text-center font-medium p-3 rounded-md hover:bg-[#3390ed]"
-                        >
-                            Login
-                        </button>
+                        <div className="flex flex-col">
+                            <button
+                                type="submit"
+                                className="bg-[#007DFA] lg:w-[100%] text-white 
+            text-center font-medium p-3 rounded-md hover:bg-[#3390ed]"
+                            >
+                                Login
+                            </button>
+                            <div className="mt-5 text-center flex items-center">
+                                <div className="flex-1 border-t border-gray-300"></div>
+                                <p className="mx-4">OR</p>
+                                <div className="flex-1 border-t border-gray-300"></div>
+                            </div>
+                            <Link to={"/signup"}>
+                                <button
+                                    type="submit"
+                                    className="bg-white w-[100%] text-[#3390ed] 
+            text-center font-medium p-3 rounded-md border-solid border-2 border-sky-500 mt-5
+            hover:bg-[#f4f6f7]"
+                                >
+                                    Register
+                                </button>
+                            </Link>
+                        </div>
                     </form>
-                    <div className="flex gap-2">
-                        <p className="">Don't Have An Account ?</p>
-                        <Link
-                            to="/signup"
-                            className="text-[#007DFA] hover:underline underline-offset-1"
-                        >
-                            Sign Up
-                        </Link>
-                    </div>
                 </div>
             </div>
         </>
