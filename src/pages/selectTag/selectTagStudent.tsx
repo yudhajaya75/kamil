@@ -1,5 +1,5 @@
-import topics from './topicsstudent';
-import topicsSecond from './topicsstudent2';
+import topics from '../../components/datadummy/topicsstudent';
+import topicsSecond from '../../components/datadummy/topicsstudent2';
 import useTopicSelection from '../../hooks/useTopicSelection';
 import { Link } from 'react-router-dom';
 

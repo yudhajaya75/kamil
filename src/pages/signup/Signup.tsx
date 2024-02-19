@@ -1,31 +1,14 @@
-import { useState } from "react";
 import Select from 'react-select'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, Navigate } from "react-router-dom";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import options from './options';
+import options from "../../components/datadummy/options";
+import useSignUp from "../../hooks/useSignUp";
 
 const Register = () => {
-    const [isVisible, setIsVisible] = useState(true);
-    const [selectedOption, setSelectedOption] = useState(options[0]);
-
-    const shouldRedirect = false;
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible);
-    };
-    const handleChange = (selected: any) => {
-        setSelectedOption(selected);
-    };
-
-    const handleRegistration = () => {
-        if (selectedOption.value === 'worker') {
-            window.location.href = '/selectworker'; // Ganti dengan URL untuk halaman student
-        } else if (selectedOption.value === 'student') {
-            window.location.href = '/selectstudent'; // Ganti dengan URL untuk halaman worker
-        }
-    };
+    const { isVisible, selectedOption, shouldRedirect, toggleVisibility, handleChange, handleRegistration } = useSignUp();
 
     if (shouldRedirect) {
         return <Navigate to="/login" />;

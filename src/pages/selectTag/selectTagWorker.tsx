@@ -1,5 +1,5 @@
-import topics from './topicsworker';
-import topicsSecond from './topicsworker2';
+import topics from '../../components/datadummy/topicsworker';
+import topicsSecond from '../../components/datadummy/topicsworker2';
 import useTopicSelection from '../../hooks/useTopicSelection';
 import { Link } from 'react-router-dom';
 

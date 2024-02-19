@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 
-// Hook untuk mengelola pemilihan topik
 const useTopicSelection = () => {
     const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
     const [selectedTopicsSecond, setSelectedTopicsSecond] = useState<string[]>([]);

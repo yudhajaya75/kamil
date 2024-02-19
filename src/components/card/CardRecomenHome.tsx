@@ -4,7 +4,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import cardsData from './cardsDataRecomen';
+import cardsData from '../datadummy/cardsDataRecomen';
 
 const CardRecomenHome = () => {
     return (
