@@ -2,7 +2,7 @@ import { Button, Toast } from 'flowbite-react';
 import Avatar from '@mui/material/Avatar';
 import { useState } from 'react';
 import { BiSolidBellRing } from "react-icons/bi";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [showToast, setShowToast] = useState(false);
@@ -79,7 +79,8 @@ const Navbar = () => {
                         )}
                     </div>
 
-                    <div className='relative left-10'>
+                    <div className='relative left-10 flex justify-center items-center gap-2'>
+                        <p>Hi, Riqki</p>
                         <a href='/profile'>
                             <Avatar src="/broken-image.jpg" />
                         </a>

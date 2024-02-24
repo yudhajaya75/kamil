@@ -17,7 +17,7 @@ const Profile = () => {
                         firstElement={
                             <>
                                 <div>
-                                    <a href='/login'>
+                                    <a href='/home'>
                                         <div className='flex items-center text-2xl pt-10 pl-10'>
                                             <BsChevronLeft />
                                             <p> Back</p>

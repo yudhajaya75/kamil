@@ -147,7 +147,6 @@ const Register = () => {
                         <div className="flex flex-row gap-2">
                             <input type="radio" name="topping" value="Male" id="male" />
                             <label htmlFor="male" className="">Male</label>
-
                             <input type="radio" className="ml-10" name="topping" value="Female" id="female" />
                             <label htmlFor="female">Female</label>
                         </div>

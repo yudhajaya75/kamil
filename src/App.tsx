@@ -9,6 +9,9 @@ import SelectStudent from './pages/selectTag/selectTagStudent';
 import Profile from './pages/profile/Profile';
 import WrongPage from './pages/wrongpage/WrongPage';
 import SwapRecomendation from './pages/swaprecomendation/SwapRecomendation';
+import Search from './pages/search/Search';
+import Details from './pages/details/details';
+import SwapForm from './components/form/SwapForm';
 
 function App() {
   const [email, setEmail] = useState("");
@@ -25,6 +28,12 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/wrong" element={<WrongPage />} />
         <Route path="/swaprecomen" element={<SwapRecomendation />} />
+        <Route path="/search/bahasa inggris" element={<Search />} />
+        <Route path="/search/ipa" element={<Search />} />
+        <Route path="/search/ips" element={<Search />} />
+        <Route path="/search/matematika" element={<Search />} />
+        <Route path="/details/bahasainggris" element={<Details />} />
+        <Route path="/swapform" element={<SwapForm />} />
       </Routes>
     </>
   );

@@ -1,9 +1,14 @@
-import React from 'react'
+import CardSearch from '../../components/search/CardSearch'
+import GlobalLayout from '../../layouts/GlobalLayout'
 
-function Search() {
+const Search = () => {
     return (
-        <div>Search</div>
+        <>
+            <GlobalLayout>
+                <CardSearch />
+            </GlobalLayout>
+        </>
     )
 }
 
-export default Search
+export default Search   
