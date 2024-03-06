@@ -7,23 +7,25 @@ const SwapRecomendation = () => {
     return (
         <>
             <GlobalLayout>
-                <div>
-                    <Back
-                        firstElement={
-                            <>
-                                <div>
-                                    <a href='/home'>
-                                        <div className='flex items-center text-2xl pt-10 pl-10'>
-                                            <BsChevronLeft />
-                                            <p> Back</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </>
-                        } />
-                </div>
-                <div>
-                    <CardData />
+                <div className='mt-20'>
+                    <div>
+                        <Back
+                            firstElement={
+                                <>
+                                    <div>
+                                        <a href='/home'>
+                                            <div className='flex items-center text-2xl pt-10 pl-10'>
+                                                <BsChevronLeft />
+                                                <p> Back</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </>
+                            } />
+                    </div>
+                    <div>
+                        <CardData />
+                    </div>
                 </div>
             </GlobalLayout>
         </>

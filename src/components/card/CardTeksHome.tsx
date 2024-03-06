@@ -3,8 +3,8 @@ import React from 'react'
 const CardTeksHome = () => {
     return (
         <>
-            <div className='flex justify-center gap-[200px] p-5'>
-                <section>
+            <div className='flex justify-center gap-[200px] p-5 rounded-2xl shadow-2xl bg-white my-20'>
+                <section id="action-1">
                     <div className=' text-4xl'>Sekolah</div>
                     <ul className=' text-gray-500 mt-5'>
                         <li>Matematika</li>
@@ -14,7 +14,7 @@ const CardTeksHome = () => {
                         <li>Biologi</li>
                     </ul>
                 </section>
-                <section>
+                <section id='action-2'>
                     <div className=' text-4xl'>Teknologi</div>
                     <ul className='text-gray-500 mt-5'>
                         <li>IPS</li>
@@ -24,7 +24,7 @@ const CardTeksHome = () => {
                         <li>Matematika</li>
                     </ul>
                 </section>
-                <section>
+                <section id='action-3'>
                     <div className=' text-4xl'>Bahasa</div>
                     <ul className='text-gray-500 mt-5'>
                         <li>Fisika</li>

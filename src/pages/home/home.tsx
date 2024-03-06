@@ -6,16 +6,16 @@ import CardImageHome2 from '../../components/card/CardImageHome2'
 
 const Home = () => {
     return (
-        <>
+        <div className='bg-slate-200'>
             <GlobalLayout>
                 <div className='max-w-[1500px] mx-10'>
-                    <CardTeksHome />
                     <CardRecomenHome />
                     <CardImageHome />
                     <CardImageHome2 />
+                    <CardTeksHome />
                 </div>
             </GlobalLayout>
-        </>
+        </div>
     )
 }
 

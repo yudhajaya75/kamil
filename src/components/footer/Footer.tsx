@@ -5,7 +5,7 @@ const Footer = () => {
   // const { adreess, contactUs } = useFooter();
 
   return (
-    <div className="footer" style={{ marginTop: 300 }}>
+    <div className="footer" style={{ marginTop: 0 }}>
       <div className="sb__footer">
         <div className="sb__footer-links">
           <div className="sb__footer-links_div">
@@ -77,7 +77,7 @@ const Footer = () => {
 
         <div className="sb__footer-below">
           <div className="sb__footer-copyright">
-            <p>Copyright © 2021 Konseling Satir Indonesia</p>
+            <p>Copyright © 2023 Ridwan Kamil</p>
           </div>
         </div>
       </div>

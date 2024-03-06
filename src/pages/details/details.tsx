@@ -6,7 +6,9 @@ const Details = () => {
     return (
         <>
             <GlobalLayout>
-                <CardDetails />
+                <div className='mt-20'>
+                    <CardDetails />
+                </div>
             </GlobalLayout>
         </>
     )

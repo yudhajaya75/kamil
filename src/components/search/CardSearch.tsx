@@ -5,8 +5,8 @@ const CardSearchIndonesia = () => {
     const [selectedOption, setSelectedOption] = useState("Bahasa Inggris");
 
     return (
-        <>
-            <div className="flex items-start  pt-10 pl-10 absolute">
+        <div className='mt-[100px]'>
+            <div className="flex items-start pt-20 pl-10 absolute">
                 <h1 className='text-xl font-bold'>
                     CATEGORY
                 </h1>
@@ -102,7 +102,7 @@ const CardSearchIndonesia = () => {
                 </div>
 
             </div>
-        </>
+        </div>
     )
 }
 
