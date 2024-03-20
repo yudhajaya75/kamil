@@ -26,9 +26,11 @@ function WrongPage() {
                     <p className='w-[60%] text-center'>it looks like there aren't many great matches for your search, please fint with other request</p>
                 </div>
                 <div className='flex justify-center items-center mt-20'>
-                    <button className='bg-[#2c88d9] text-white py-2 px-20 rounded-md'>
-                        search again
-                    </button>
+                    <a href="/home">
+                        <button className='bg-[#2c88d9] text-white py-2 px-20 rounded-md'>
+                            search again
+                        </button>
+                    </a>
                 </div>
             </div>
         </>

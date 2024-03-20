@@ -8,14 +8,27 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const Navbar = () => {
     const [showToast, setShowToast] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
     const [notificationCount, setNotificationCount] = useState(3);
+    const [searchQuery, setSearchQuery] = useState('');
 
 
     const handleSearch = () => {
-        navigate(`/search/${searchQuery}`);
+
+        const validQueries = ["bahasa inggris", "matematika", "ips"];
+        const searchQueryLowercase = searchQuery.toLowerCase();
+
+        if (validQueries.includes(searchQueryLowercase)) {
+
+            navigate(`/search/${searchQueryLowercase}`);
+
+        }
+
+        else {
+            navigate(`/wrong`)
+        }
+
     };
 
     const handleToastClick = () => {
@@ -31,7 +44,7 @@ const Navbar = () => {
         const section = document.getElementById(sectionId);
         if (section) {
             window.scrollTo({
-                top: section.offsetTop,
+                top: section.offsetTop + -200,
                 behavior: "smooth"
             });
         }
@@ -53,20 +66,22 @@ const Navbar = () => {
                         </DropdownButton>
                         <div className="relative p-5 flex flex-row-reverse  w-full">
                             <div className='flex justify-center items-center ml-10 gap-2'>
-                                {/* <>
-                            onClick={() => setIsLoggedIn(true)}
-                                <p>Hi, Riqki</p>
-                                <a href='/profile'>
-                                    <Avatar src="/broken-image.jpg" />
-                                </a>
-                            </> */}
-                                <button
-                                    className='px-10 py-2 bg-[#007DFA] rounded-xl text-white'
-                                >
-                                    <a href="/login">
-                                        Login
-                                    </a>
-                                </button>
+                                {isLoggedIn ? (
+                                    <>
+                                        <p>Hi, Riqki</p>
+                                        <a href='/profile'>
+                                            <Avatar src="/broken-image.jpg" />
+                                        </a>
+                                    </>
+                                ) : (
+                                    <button
+                                        className='px-10 py-2 bg-[#007DFA] rounded-xl text-white'
+                                    >
+                                        <a href="/login">
+                                            Login
+                                        </a>
+                                    </button>
+                                )}
                             </div>
                             <div>
                                 <Button onClick={() => setShowToast(prevState => !prevState)}>
@@ -103,7 +118,8 @@ const Navbar = () => {
                                         clipRule="evenodd" />
                                 </svg>
                             </span>
-                            <input type="search"
+                            <input
+                                type="search"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 onKeyDown={(e) => {
@@ -114,7 +130,8 @@ const Navbar = () => {
                                 className="relative max-w-[300px] bg-white m-0 block flex-auto rounded border border-solid border-neutral-300 px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                                 placeholder="Search"
                                 aria-label="Search"
-                                aria-describedby="button-addon2" />
+                                aria-describedby="button-addon2"
+                            />
                         </div>
                     </div>
                 </div>
