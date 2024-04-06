@@ -13,6 +13,7 @@ import Search from './pages/search/Search';
 import Details from './pages/details/details';
 import SwapForm from './components/form/SwapForm';
 import Progresswap from './pages/progresswap/Progresswap';
+import Payment from './pages/payment/Payment';
 
 function App() {
   const [email, setEmail] = useState("");
@@ -36,6 +37,7 @@ function App() {
         <Route path="/details/bahasainggris" element={<Details />} />
         <Route path="/swapform" element={<SwapForm />} />
         <Route path="/progresswap" element={<Progresswap />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );

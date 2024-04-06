@@ -26,7 +26,7 @@ const Swapprogress = () => {
                         } />
                 </div>
                 <>
-                    <div className='mx-[15%] w-[70%] h-[1300px] border-2 border-slate-400 shadow-2xl bg-white'>
+                    <div className='mx-[15%] w-[70%] h-[1350px] border-2 border-slate-400 shadow-2xl bg-white'>
                         <div className='mx-[10%] mt-10'>
                             <p className='text-center pt-10 text-black bg text-2xl font-bold'>
                                 Swap Skill in Progress
@@ -64,7 +64,7 @@ const Swapprogress = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='mx-[10%] mt-10 absolute left-[45%] top-[32%]'>
+                        <div className='mx-[10%] mt-10 absolute left-[45%] top-[32%] pt-6'>
                             <div className='pt-20'>
                                 <div className='flex flex-col w-[82%] justify-center items-center'>
                                     <img src="/avatar.png" alt="profile" className='w-[200px]' />
