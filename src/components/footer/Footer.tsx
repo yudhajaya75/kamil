@@ -5,7 +5,7 @@ const Footer = () => {
   // const { adreess, contactUs } = useFooter();
 
   return (
-    <div className="footer" style={{ marginTop: 0 }}>
+    <div className="footer" style={{ marginTop: 100 }}>
       <div className="sb__footer">
         <div className="sb__footer-links">
           <div className="sb__footer-links_div">

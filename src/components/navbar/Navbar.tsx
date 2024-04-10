@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='bg-[#2eb5c0] fixed top-0 left-0 w-full h-[100px] z-10'>
+            <nav className='bg-[#2eb5c0] sticky top-0 left-0 w-full h-[100px] z-10'>
                 <div className="mx-auto min-h-[50px] -mt-5">
                     <div className='relative flex flex-row items-center ml-20'>
                         <a href="/home">

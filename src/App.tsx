@@ -14,6 +14,8 @@ import Details from './pages/details/details';
 import SwapForm from './components/form/SwapForm';
 import Progresswap from './pages/progresswap/Progresswap';
 import Payment from './pages/payment/Payment';
+import Success from './pages/succes/succes';
+import DetailsPageCourse from './pages/DetailsPageCourse/DetailsPageCourse';
 
 function App() {
   const [email, setEmail] = useState("");
@@ -38,6 +40,8 @@ function App() {
         <Route path="/swapform" element={<SwapForm />} />
         <Route path="/progresswap" element={<Progresswap />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/detailscourse" element={<DetailsPageCourse />} />
       </Routes>
     </>
   );
