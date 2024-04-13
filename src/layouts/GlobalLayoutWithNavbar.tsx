@@ -7,7 +7,7 @@ type props = {
 
 const GlobalLayoutWithNavbar = ({ children }: props) => {
   return (
-    <div className="mx-auto max-w-[1710px]">
+    <div className="mx-auto">
       <NewNavbar />
       {children}
     </div>

@@ -1,21 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
-import React, { useState } from 'react';
+import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
 
-import Home from './pages/home/home';
-import Login from './pages/login/Login';
-import Signup from './pages/signup/Signup';
-import SelectWorker from './pages/selectTag/selectTagWorker';
-import SelectStudent from './pages/selectTag/selectTagStudent';
-import Profile from './pages/profile/Profile';
-import WrongPage from './pages/wrongpage/WrongPage';
-import SwapRecomendation from './pages/swaprecomendation/SwapRecomendation';
-import Search from './pages/search/Search';
-import Details from './pages/details/details';
-import SwapForm from './components/form/SwapForm';
-import Progresswap from './pages/progresswap/Progresswap';
-import Payment from './pages/payment/Payment';
-import Success from './pages/succes/succes';
-import DetailsPageCourse from './pages/DetailsPageCourse/DetailsPageCourse';
+import Home from "./pages/home/home";
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup";
+import SelectWorker from "./pages/selectTag/selectTagWorker";
+import SelectStudent from "./pages/selectTag/selectTagStudent";
+import Profile from "./pages/profile/Profile";
+import WrongPage from "./pages/wrongpage/WrongPage";
+import SwapRecomendation from "./pages/swaprecomendation/SwapRecomendation";
+import Search from "./pages/search/Search";
+import Details from "./pages/details/details";
+import SwapForm from "./components/form/SwapForm";
+import Progresswap from "./pages/progresswap/Progresswap";
+import Payment from "./pages/payment/Payment";
+import Success from "./pages/succes/succes";
+import DetailsPageCourse from "./pages/DetailsPageCourse/DetailsPageCourse";
+import Swapdetails from "./pages/Swapdetails/Swapdetails";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -23,8 +24,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login setEmail={setEmail} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/selectworker" element={<SelectWorker />} />
@@ -42,6 +43,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/success" element={<Success />} />
         <Route path="/detailscourse" element={<DetailsPageCourse />} />
+        <Route path="/swapdetails" element={<Swapdetails />} />
       </Routes>
     </>
   );

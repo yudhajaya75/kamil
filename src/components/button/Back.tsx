@@ -1,16 +1,23 @@
+import React from "react";
 import { BsChevronLeft } from "react-icons/bs";
-import React from 'react'
 
-type props = {
-    firstElement: React.ReactNode;
-}
+type Props = {
+  onClick: () => void;
+  buttonText?: string;
+};
 
-const ButtonBack = ({ firstElement }: props) => {
-    return (
-        <>
-            {firstElement}
-        </>
-    )
-}
+const GlobalBackButton: React.FC<Props> = ({
+  onClick,
+  buttonText = "Back",
+}) => {
+  return (
+    <div className="text-2xl pt-10 pl-10 w-[300px]">
+      <button onClick={onClick} className="flex items-center">
+        <BsChevronLeft />
+        <p>{buttonText}</p>
+      </button>
+    </div>
+  );
+};
 
-export default ButtonBack
+export default GlobalBackButton;

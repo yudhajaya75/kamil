@@ -1,35 +1,26 @@
-import { BsChevronLeft } from 'react-icons/bs';
-import Back from '../../components/button/Back';
-import CardData from '../../components/card/CardSwapRecomen'
-import GlobalLayout from '../../layouts/GlobalLayout';
+import Back from "../../components/button/Back";
+import CardData from "../../components/card/CardSwapRecomen";
+import GlobalLayout from "../../layouts/GlobalLayout";
+import { useNavigate } from "react-router-dom";
 
 const SwapRecomendation = () => {
-    return (
-        <>
-            <GlobalLayout>
-                <div className='mt-20'>
-                    <div>
-                        <Back
-                            firstElement={
-                                <>
-                                    <div>
-                                        <a href='/home'>
-                                            <div className='flex items-center text-2xl pt-10 pl-10'>
-                                                <BsChevronLeft />
-                                                <p> Back</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </>
-                            } />
-                    </div>
-                    <div>
-                        <CardData />
-                    </div>
-                </div>
-            </GlobalLayout>
-        </>
-    )
-}
+  const navigate = useNavigate();
+  const handleBackClick = () => {
+    navigate("/home");
+  };
 
-export default SwapRecomendation
+  return (
+    <>
+      <GlobalLayout>
+        <div className="mt-20">
+          <Back onClick={handleBackClick} buttonText="Back" />
+          <div>
+            <CardData />
+          </div>
+        </div>
+      </GlobalLayout>
+    </>
+  );
+};
+
+export default SwapRecomendation;

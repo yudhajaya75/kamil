@@ -1,12 +1,17 @@
 import GlobalLayout from "../../layouts/GlobalLayout";
 import Back from "../../components/button/Back";
-import { BsChevronLeft } from "react-icons/bs";
 import carddetailscourse from "../../components/datadummy/CardDetailsCourse";
 import Select from "react-select";
 import useDetailsCourse from "../../hooks/useDetailsCourse";
 import detailcourse2 from "../../components/datadummy/detailcourse2";
+import { useNavigate } from "react-router-dom";
 
 const DetailsPageCourse = () => {
+  const navigate = useNavigate();
+  const handleBackClick = () => {
+    navigate("/home");
+  };
+
   const {
     selectedOption,
     handleChange,
@@ -23,22 +28,7 @@ const DetailsPageCourse = () => {
     <>
       <GlobalLayout>
         <>
-          <div className="pt-24">
-            <Back
-              firstElement={
-                <>
-                  <div>
-                    <a href="/home">
-                      <div className="flex items-center text-2xl pt-10 pl-10">
-                        <BsChevronLeft />
-                        <p> Details Course</p>
-                      </div>
-                    </a>
-                  </div>
-                </>
-              }
-            />
-          </div>
+          <Back onClick={handleBackClick} buttonText="Details Course" />
           <div className="mx-[27%] w-[50%] h-[1500px] border-4 rounded-2xl shadow-2xl bg-white">
             <div className="mx-[10%] mt-10">
               <div>
