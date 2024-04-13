@@ -1,6 +1,6 @@
-const swapformsekolah3 = [
+const detailcourse2 = [
   { value: "seni budaya", label: "Seni Budaya" },
   { value: "matematika", label: "Matematika" },
 ];
 
-export default swapformsekolah3;
+export default detailcourse2;
